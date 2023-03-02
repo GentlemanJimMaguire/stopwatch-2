@@ -1,6 +1,3 @@
-input.onButtonPressed(Button.A, function () {
-    i = 0
-})
 function pause2 () {
     basic.showLeds(`
         . . . . .
@@ -24,6 +21,9 @@ function pause2 () {
         # # # # #
         `)
 }
+input.onButtonPressed(Button.A, function () {
+    i = 0
+})
 input.onButtonPressed(Button.B, function () {
     basic.showNumber(i)
     pause2()
