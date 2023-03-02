@@ -7,6 +7,3 @@ input.onButtonPressed(Button.B, function () {
     elapsed = input.runningTime() - start
     basic.showNumber(Math.idiv(elapsed, 1000))
 })
-basic.forever(function () {
-	
-})
