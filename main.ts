@@ -1,12 +1,37 @@
-let start = 0
-let elapsed = 0
+let i = 0
 input.onButtonPressed(Button.A, function () {
-    start = input.runningTime()
+    i = 0
 })
-input.onButtonPressed(Button.B, function () {
-    elapsed = input.runningTime() - start
-    basic.showNumber(Math.idiv(elapsed, 1000))
-})
-basic.forever(function () {
-	
+function pause2 () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # # # .
+        . # . # .
+        . # # # .
+        . . . . .
+        `)
+    basic.showLeds(`
+        # # # # #
+        # . . . #
+        # . . . #
+        # . . . #
+        # # # # #
+        `)
+}
+input.onButtonPressed(Button.AB, function () {
+    basic.showNumber(i)
+    pause2()
+    basic.showNumber(Math.idiv(i, 3))
+    pause2()
+    basic.showNumber(Math.round(i / 3))
+    pause2()
+    basic.showNumber(Math.floor(i / 3))
+    i += 1
 })
