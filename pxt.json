@@ -1,5 +1,5 @@
 {
-    "name": "Stopwatch #2",
+    "name": "Stopwatch",
     "description": "",
     "dependencies": {
         "core": "*",
